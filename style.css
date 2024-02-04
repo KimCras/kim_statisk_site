@@ -4,7 +4,6 @@ h2,
 span {
   font-family: "Bebas Neue", sans-serif;
   text-decoration: none;
-  color: black;
 }
 
 main {
@@ -24,4 +23,9 @@ header {
 
 .product a {
   text-decoration: none;
+}
+
+.brandname,
+.productdisplayname {
+  color: black;
 }

@@ -72,10 +72,6 @@ header {
   bottom: 50%;
 }
 
-.category_container img:hover {
-  filter: blur(1.8px);
-}
-
 .category_container a {
   color: white;
   text-decoration: none;
