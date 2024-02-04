@@ -87,10 +87,15 @@ header {
 }
 
 /* Productlist */
+
+.page-title {
+  margin-left: 15px;
+}
+
 .product_container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   max-width: 1500px;
 }
@@ -100,7 +105,9 @@ header {
   flex-direction: column;
   border: 1px solid #ccc;
   padding: 15px;
-  margin: 10px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
   width: 250px;
   align-items: center;
   text-align: center;
@@ -132,7 +139,7 @@ header {
 
 .add-to-cart-btn {
   display: flex;
-  background-color: #009688;
+  background-color: #7ab3d2;
   font-family: "Bebas Neue", sans-serif;
   color: #fff;
   padding: 8px 15px;
@@ -147,11 +154,10 @@ header {
 }
 
 .add-to-cart-btn:hover {
-  background-color: #00796b;
+  background-color: #44a79b;
 }
 
 .soldout {
-  background-color: #e74c3c;
   color: #fff;
   padding: 8px 15px;
   display: block;

@@ -1,10 +1,12 @@
 a,
 h1,
+h2,
 span {
   font-family: "Bebas Neue", sans-serif;
   text-decoration: none;
   color: black;
 }
+
 main {
   padding-top: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

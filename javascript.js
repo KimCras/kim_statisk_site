@@ -27,8 +27,6 @@ function isSoldOut(item) {
   return item.soldout === 1;
 }
 
-// ... (previous code)
-
 function showProducts(product_JSON) {
   let product_clone;
 
@@ -38,26 +36,31 @@ function showProducts(product_JSON) {
     product_clone.querySelector(".brandname").textContent = product.brandname;
     product_clone.querySelector(".productdisplayname").textContent = product.productdisplayname;
     product_clone.querySelector(".price").textContent = product.price + " kr.";
-    product_clone.querySelector(".discount").textContent = product.discount + "%";
 
-    // Check if the item is sold out
-    // The ternary operator (? :): If isSoldOut(product) is true, then "Sold Out" is assigned to soldOutStatus; otherwise, "Available" is assigned.
-    const soldOutStatus = isSoldOut(product) ? "Sold Out" : "Available"; //is like a different way to write an if-else statement
-    const soldOutElement = product_clone.querySelector(".soldout");
-    soldOutElement.textContent = soldOutStatus;
+    // Check if the discount is null
+    const discountElement = product_clone.querySelector(".discount");
 
-    // Hide the sold out text if the item is available
-    function isSoldOut(product) {
-      // This line checks if the soldout property of the product object is equal to 1. The === is the strict equality operator, which checks both value and type.
-      if (product.soldout === 1) {
-        return true; // Product is sold out
-      } else {
-        return false; // Product is not sold out
-      }
+    //product.discount !== null: This condition checks if the value of product.discount is not equal to null. If product.discount has a value other than null (for example, a number or a string), the condition is true. If product.discount IS null, the condition is false.
+    // so here it says: if the product.discount does NOT have the same value as null, display the discount. if the discount is null, hide it.
+    if (product.discount !== null) {
+      // If the discount has another value than null, show this discount
+      discountElement.textContent = product.discount + "%";
+    } else {
+      // If discount is null, hide the element
+      discountElement.style.display = "none";
     }
-    //The ! gives us the opposite of the false/truth statement. So if IsSouldOut is true, the ! turns it into false and vice versa. This one says if isSoldOut is false (Is not sold out), have a display = none.
-    if (!isSoldOut(product)) {
-      soldOutElement.style.display = "none";
+
+    const isSoldOutProduct = isSoldOut(product);
+    const addToCartBtn = product_clone.querySelector(".add-to-cart-btn");
+
+    if (isSoldOutProduct) {
+      addToCartBtn.disabled = true;
+      addToCartBtn.textContent = "Sold Out";
+      addToCartBtn.style.backgroundColor = "red";
+    } else {
+      addToCartBtn.disabled = false;
+      addToCartBtn.textContent = "Add to Cart";
+      addToCartBtn.style.backgroundColor = "";
     }
 
     productContainer.appendChild(product_clone);
