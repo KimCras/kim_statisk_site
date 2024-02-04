@@ -1,0 +1,213 @@
+.category_container img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+.logo a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: grey;
+  font-size: 22px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-list,
+.nav-footer {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 10%;
+}
+
+/* .nav-list li {
+    margin-right: 10px;
+  } */
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  margin-right: 75px;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* CATEGORIES */
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.title_category {
+  margin-left: 10%;
+}
+
+.centered {
+  position: relative;
+  bottom: 50%;
+}
+
+.category_container img:hover {
+  filter: blur(1.8px);
+}
+
+.category_container a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.category_container a:hover {
+  color: black;
+}
+
+/* Productlist */
+.product_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  align-items: center;
+  text-align: center;
+}
+
+.fashion_image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-title {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-weight: 200;
+  color: #929292;
+  font-family: 14px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #000000;
+  margin-top: auto;
+  margin-top: 50px; /* Add margin-top for spacing */
+}
+
+.add-to-cart-btn {
+  display: flex;
+  background-color: #009688;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.add-to-cart-container {
+  display: flex;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #00796b;
+}
+
+.soldout {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px 15px;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.on-sale {
+  position: relative;
+}
+
+.sale-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.on-sale .original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+}
+
+.discount {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+/* product */
+.grid-it {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 0 60px 0 60px;
+}
+.grid-it img {
+  width: 30%;
+}
+
+.product-card {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-details {
+  margin-bottom: auto;
+}

@@ -1,0 +1,25 @@
+a,
+h1,
+span {
+  font-family: "Bebas Neue", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+main {
+  padding-top: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body {
+  /* background-color: rgb(29, 29, 29); */
+  margin: 0;
+}
+
+header {
+  /* background-color: rgb(59, 59, 59); */
+  margin: 0;
+  padding: 10px;
+}
+
+.product a {
+  text-decoration: none;
+}

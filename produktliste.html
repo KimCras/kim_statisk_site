@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Produktliste</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <a href="index.html">LOGO</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="kategori.html">KATEGORI</a></li>
+                <li><a href="produkt.html">PRODUKT</a></li>
+                <li><a href="produktliste.html">PRODUKTLISTE</a></li>
+            </ul>
+    </header>
+
+    <main>
+        <div class="productlist_flex">
+            <section>
+                <h2>The products</h2>
+                <div class="product_container"></div>
+            </section>
+        </div>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
+<template class="fashion_template">
+    <article class="product_card">
+        <a href="produkt.html">
+            <img class="fashion_image" src="img/1533.webp" alt="t-shirt">
+            <h2 class="brandname">brandname</h2>
+            <p class="productdisplayname">productname</p>
+        </a>
+        <div class="bottom">
+            <span class="price"></span>
+            <span class="discount"></span>
+            <span class="soldout"></span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+
+        </div>
+    </article>
+</template>
+
+
+<!-- <div class="product sold-out">
+                <a href="produkt.html">
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">Sold Out Product</h2>
+                    <p class="product-description">This product is currently sold out. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="product-price">$19.99</span>
+                    <span class="sold-out-label">Sold Out</span>
+                </div>
+            </div>
+
+            <div class="product on-sale">
+                <a href="produkt.html">
+                    <span class="sale-label">On Sale</span>
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">On Sale Product</h2>
+                    <p class="product-description">This product is on sale. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="original-price">$29.99</span>
+                    <span class="sale-price">$19.99</span>
+                    <div class="add-to-cart-container">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product on-sale sold-out">
+                <a href="produkt.html">
+                    <span class="sale-label">On Sale</span>
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">On Sale and Sold Out Product</h2>
+                    <p class="product-description">This product is currently sold out and is on sale. Lorem ipsum dolor
+                        sit
+                        amet,
+                        consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="original-price">$29.99</span>
+                    <span class="sale-price">$19.99</span>
+                    <span class="sold-out-label">Sold Out</span>
+                </div>
+            </div>
+
+            <div class="product">
+                <a href="produkt.html">
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">Product Name</h2>
+                    <p class="product-description">Product description goes here. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="product-price">$19.99</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product sold-out">
+                <a href="produkt.html">
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">Sold Out Product</h2>
+                    <p class="product-description">This product is currently sold out. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="product-price">$19.99</span>
+                    <span class="sold-out-label">Sold Out</span>
+                </div>
+            </div>
+
+            <div class="product on-sale">
+                <a href="produkt.html">
+                    <span class="sale-label">On Sale</span>
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">On Sale Product</h2>
+                    <p class="product-description">This product is on sale. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="original-price">$29.99</span>
+                    <span class="sale-price">$19.99</span>
+                    <div class="add-to-cart-container">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product on-sale sold-out">
+                <a href="produkt.html">
+                    <span class="sale-label">On Sale</span>
+                    <img src="img/1533.webp" alt="Product Image">
+                    <h2 class="product-title">On Sale and Sold Out Product</h2>
+                    <p class="product-description">This product is currently sold out and is on sale. Lorem ipsum dolor
+                        sit
+                        amet,
+                        consectetur
+                        adipiscing elit.</p>
+                </a>
+                <div class="bottom">
+                    <span class="original-price">$29.99</span>
+                    <span class="sale-price">$19.99</span>
+                    <span class="sold-out-label">Sold Out</span>
+                </div>
+            </div> -->
