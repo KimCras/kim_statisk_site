@@ -25,7 +25,10 @@ header {
   text-decoration: none;
 }
 
-.brandname,
+.brandname {
+  color: grey;
+}
+
 .productdisplayname {
   color: black;
 }
