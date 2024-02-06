@@ -33,6 +33,7 @@ function showProducts(product_JSON) {
   product_JSON.forEach((product) => {
     console.log("product", product);
     product_clone = fashionTemplate.cloneNode(true).content;
+    product_clone.querySelector("a").href = `produkt.html?id=${product.id}`;
     product_clone.querySelector(".brandname").textContent = product.brandname;
     product_clone.querySelector(".productdisplayname").textContent = product.productdisplayname;
     product_clone.querySelector(".price").textContent = product.price + " kr.";
