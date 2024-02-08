@@ -28,48 +28,54 @@
 
     <main>
         <!-- <h1 class="title_category">Categories</h1> -->
-        <div class="categories">
-            <div class="category_container">
-                <a href="produktliste.html">
-                    <img src="img/acessories.webp" alt="Accessories">
-                    <span class="centered">ACCESSORIES</span>
-                </a>
-            </div>
-            <div class="category_container">
-                <a href="produktliste.html">
+        <section class="categories">
+
+            <template class="categoryTemplate">
+                <div class="category_container">
+                    <a href="produktliste.html?category=">
+                        <img src="" alt="Accessories">
+                        <h3 class="centered">ACCESSORIES</h3>
+                    </a>
+                </div>
+            </template>
+        </section>
+
+
+        <!-- <div class="category_container">
+                <a href="produktliste.html?category=Apparel">
                     <img src="img/apparel.webp" alt="apparel">
                     <span class="centered">APPAREL</span>
                 </a>
             </div>
             <div class="category_container">
-                <a href="produktliste.html">
+                <a href="produktliste.html?category=Footwear">
                     <img src="img/footwear.webp" alt="Footwear">
                     <span class="centered">FOOTWEAR</span>
                 </a>
             </div>
             <div class="category_container">
-                <a href="produktliste.html">
+                <a href="produktliste.html?category=Free Items">
                     <img src="img/item.webp" alt="Free Items">
                     <span class="centered">FREE ITEMS</span>
                 </a>
             </div>
 
             <div class="category_container">
-                <a href="produktliste.html">
+                <a href="produktliste.html?category=Personal Care">
                     <img src="img/selfcare.webp" alt="Selfcare">
                     <span class="centered">PERSONAL CARE</span>
                 </a>
             </div>
             <div class="category_container">
-                <a href="produktliste.html">
+                <a href="produktliste.html?category=Sporting Goods">
                     <img src="img/sport.webp" alt="Sporting goods">
                     <span class="centered">SPORTING GOODS</span>
                 </a>
-            </div>
+            </div> -->
 
         </div>
     </main>
-
+    <script src="category.js"></script>
 </body>
 
 </html>

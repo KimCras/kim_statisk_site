@@ -1,6 +1,9 @@
-window.addEventListener("DOMContentLoaded", init);
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+const categoryUrl = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+const FashionURL = "https://kea-alt-del.dk/t7/api/products?limit=30";
 
-const FashionURL = "https://kea-alt-del.dk/t7/api/products";
+window.addEventListener("DOMContentLoaded", init);
 
 let fashionTemplate;
 let productContainer;
@@ -14,7 +17,7 @@ function init() {
   productContainer = document.querySelector(".product_container");
   console.log("product_container", productContainer);
 
-  fetch(FashionURL)
+  fetch(categoryUrl)
     .then(function (response) {
       return response.json();
     })
@@ -37,6 +40,10 @@ function showProducts(product_JSON) {
     product_clone.querySelector(".brandname").textContent = product.brandname;
     product_clone.querySelector(".productdisplayname").textContent = product.productdisplayname;
     product_clone.querySelector(".price").textContent = product.price + " kr.";
+    product_clone.querySelector(".category").textContent = product.category;
+
+    product_clone.querySelector(".fashion_image").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+    product_clone.querySelector(".fashion_image").alt = product.productdisplayname;
 
     // Check if the discount is null
     const discountElement = product_clone.querySelector(".discount");
