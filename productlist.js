@@ -17,11 +17,12 @@ function init() {
   productContainer = document.querySelector(".product_container");
   console.log("product_container", productContainer);
 
+  //fetch here is receiving my json data/arrays thru its URL. It then gives us a Promise,
   fetch(categoryUrl)
-    .then(function (response) {
+    .then((response) => {
       return response.json();
     })
-    .then(function (json) {
+    .then((json) => {
       showProducts(json);
     });
 }
@@ -45,19 +46,21 @@ function showProducts(product_JSON) {
     product_clone.querySelector(".fashion_image").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
     product_clone.querySelector(".fashion_image").alt = product.productdisplayname;
 
-    // Check if the discount is null
-    const discountElement = product_clone.querySelector(".discount");
-
-    //product.discount !== null: This condition checks if the value of product.discount is not equal to null. If product.discount has a value other than null (for example, a number or a string), the condition is true. If product.discount IS null, the condition is false.
-    // so here it says: if the product.discount does NOT have the same value as null, display the discount. if the discount is null, hide it.
+    // Check if the discount is not null
     if (product.discount !== null) {
-      // If the discount has another value than null, show this discount
-      discountElement.textContent = product.discount + "%";
+      // If there is a discount, show the "ON SALE" label
+      product_clone.querySelector(".sale-label").style.display = "block";
+
+      // Update the price display to show the discounted price
+      const priceElement = product_clone.querySelector(".price");
+      const discountedPrice = (product.price * (100 - product.discount)) / 100;
+      priceElement.textContent = discountedPrice.toFixed(2) + " kr.";
     } else {
-      // If discount is null, hide the element
-      discountElement.style.display = "none";
+      // If no discount, hide the "ON SALE" label
+      product_clone.querySelector(".sale-label").style.display = "none";
     }
 
+    // Check if the product is sold out
     const isSoldOutProduct = isSoldOut(product);
     const addToCartBtn = product_clone.querySelector(".add-to-cart-btn");
 

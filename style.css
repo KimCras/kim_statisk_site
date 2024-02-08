@@ -8,6 +8,7 @@ span {
 
 main {
   padding-top: 25px;
+  padding-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 body {
@@ -38,4 +39,12 @@ header {
 .price,
 .discount {
   font-size: 18px;
+}
+
+.price {
+  color: black;
+}
+
+.category {
+  color: rgb(55, 55, 174);
 }

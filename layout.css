@@ -40,10 +40,6 @@ header {
   margin-right: 10%;
 }
 
-/* .nav-list li {
-    margin-right: 10px;
-  } */
-
 .nav-list a {
   text-decoration: none;
   color: black;
@@ -76,6 +72,10 @@ header {
   bottom: 50%;
 }
 
+h3.centered {
+  margin: 0;
+}
+
 .category_container a {
   color: white;
   text-decoration: none;
@@ -98,21 +98,48 @@ header {
   row-gap: 15px;
 }
 
+.sale-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+}
+
 .product_card {
+  position: relative; /* Ensure product card is a positioned parent for absolute positioning */
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
   margin: 10px;
   height: 100%; /* Ensure all product cards have equal height */
 }
+
 .text_padding,
 .bottom {
-  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Align text elements vertically */
+  justify-content: space-between; /* Space evenly between elements */
+  height: 100%; /* Fill the entire height of the container */
+  margin: 10px;
+}
+
+/* Adjust margins and padding for consistency */
+.brandname,
+.productdisplayname,
+.category {
+  margin: 0;
+}
+
+.brandname {
+  margin-top: 5px;
 }
 
 .productlist_flex {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 90px;
+  margin-right: 90px;
 }
 
 .fashion_image {
@@ -140,15 +167,13 @@ header {
 }
 
 .add-to-cart-btn {
-  display: flex;
-  background-color: #7ab3d2;
+  background-color: #a0bdcc;
   font-family: "Bebas Neue", sans-serif;
   color: #fff;
   padding: 8px 15px;
   border: none;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 10px;
 }
 
 .add-to-cart-container {
@@ -193,10 +218,6 @@ header {
   color: #e74c3c;
 }
 
-.bottom {
-  margin-top: auto;
-}
-
 /* product */
 .grid-it {
   display: flex;
@@ -213,9 +234,6 @@ header {
   margin: 50px auto;
   background-color: #fff;
   border-radius: 10px;
+  border-color: #000000;
   overflow: hidden;
-}
-
-.product-details {
-  margin-bottom: auto;
 }
